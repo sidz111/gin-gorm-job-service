@@ -51,7 +51,6 @@ func (s *jobService) Delete(ctx context.Context, id int) error {
 	}
 	return s.repo.Delete(ctx, id)
 }
-
 func JobValidation(job *model.Job) error {
 	if job.Title == "" {
 		return fmt.Errorf("Title Required")

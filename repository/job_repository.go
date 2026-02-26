@@ -22,7 +22,6 @@ type jobRepo struct {
 func NewJobRepository(db *gorm.DB) JobRepository {
 	return &jobRepo{db: db}
 }
-
 func (r *jobRepo) Create(ctx context.Context, job *model.Job) error {
 	err := r.db.WithContext(ctx).Create(job).Error
 	if err != nil {

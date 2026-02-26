@@ -15,7 +15,6 @@ func main() {
 		panic("failed to connect db")
 	}
 	router := gin.Default()
-
 	config.DB.AutoMigrate(&model.Job{})
 	repo := repository.NewJobRepository(config.DB)
 	serv := service.NewJobService(repo)

@@ -90,7 +90,6 @@ func (c *JobController) Update(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{
 		"newData": job,
 	})
-
 }
 func (c *JobController) Delete(ctx *gin.Context) {
 	id, err := strconv.Atoi(ctx.Param("id"))

@@ -15,7 +15,6 @@ func ConnectDB() error {
 	db_host := "localhost"
 	db_port := 3303
 	db_name := "gorm_db"
-
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s", db_username, db_pass, db_host, db_port, db_name)
 
 	database, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
